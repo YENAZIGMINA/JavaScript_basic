@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 basic2</title>
+</head>
+<body>
+    <script>
+        //변수:데이터를 저장하는 공간
+/*      var 철수 = 10;
+        var 영희 = "javaScript";
+        var 명수 = true; */
+
+        var 철수 = 10,
+            영희 = "javaScript",
+            명수 = true;
+
+        var 텍스트1="자바스크립트";
+        var 텍스트2="기초";
+        document.write(텍스트1 + 텍스트2) // +가 연결연상자 역할
+
+        var 민수="2";
+        var 민숙=4;  // ❗""가 없으면 숫자도 문자로 인식 ( ❗""안 숫자는 숫자로 인식)
+        var 말숙=3;
+        document.write("<br>") // 줄바꿈
+        document.write(민수 + 민숙) // 문자"24"
+        document.write("<br>")
+        document.write(민숙+민수) // "42"
+        document.write("<br>")
+        document.write(민숙+말숙+민수) // "72" -> 문자화숫자+문자화숫자=7+숫자"2"=72
+        document.write("<br>")
+        document.write(민수+민숙+말숙)  // "243"
+        document.write("<br>")
+        // ✔문자화 숫자는 +를 제외한 다른 연산자에서는 숫자로 변환
+        document.write(민수 - 민숙 + "<br>") // "-2"
+        document.write(민수 * 민숙 + "<br>") // "8"
+        document.write(민숙 / 민수 + "<br>") // "2" -> 나누기(몫)
+        
+        var 일동=5;
+        var 이동=2;
+        document.write(일동 % 이동 + "<br>") // "1" -> %는 나머지를 구함
+
+
+        var 후치=3;
+        후치++; // ++은 1씩 더해진다 //후치=후치+1
+        document.write(후치 + "<br>") // "4"
+
+        var 전치=3;
+        ++전치;
+        document.write(전치 + "<br>") // "4"
+
+        var 오동=5;
+        오동 = 오동+1; //❗컴퓨터는 우측부터 계산해서 들어옴 (오동+1부터 계산)
+        document.write(오동) // "6"
+        
+    </script>
+</body>
+</html>
