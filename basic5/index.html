@@ -51,6 +51,52 @@
         // >  x>y x가 y보다 크면 true
         console.log(구일>팔일) //true
 
+        // <= x가 y보다 작거나 같으면 true
+        console.log(구일<=팔일) // false
+
+        // <= x가 y보다 크거나 같으면 true
+        console.log(구일>=팔일) // true
+
+
+        let 사일 = 4;
+        let 네일 = "4";
+
+        // == 같으면 true (), ✖ 문자인지 형태(자료형)까지 구별못함!
+        console.log(사일 == 네일); // true
+        // != 다르면 true, 같으면 false
+        console.log(사일 != 네일); // false
+
+        // === 같은가? 은 숫자인지, ➰문자인지 형태(자료형)까지 구별
+        console.log(사일 === 네일); // false
+        // !== 다른가?
+        console.log(사일 !== 네일); // true
+
+
+
+        //🔸논리연산자
+        // &&(AND연산자) : A와 B가 모두 true이면 true
+        // true && true ==> true
+        // true && false ==> false
+        // false && true ==> false
+
+        // true는 console 확인하고 찍힘
+        true && console.log("논리연산자 and")
+        // 이미 false라서 console로 안넘어가므로 안찍힘
+        false && console.log("false 논리연산자 and")
+
+        //a||b : or연산자 ==> 둘 중에 하나라도 true이면 true
+                        //==> 둘 다 false 일 때만 false
+
+        let aa = 10;
+        let bb = 20;
+        let cc = 30;
+
+        console.log(aa<bb && bb<cc) // true (둘다 맞으니까)
+        console.log(aa>bb && bb<cc) // false (둘중에 하나가 틀리니까)
+        console.log(aa>bb || bb<cc) // true (둘중에 하나라도 맞으니까)
+        console.log(aa>bb || bb>cc) // false (둘다 틀리니까)
+
+    
     </script>
 </body>
 </html>
