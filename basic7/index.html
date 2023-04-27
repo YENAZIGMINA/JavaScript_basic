@@ -94,7 +94,7 @@
         } */
 
 
-        var html = 30;
+/*      var html = 30;
         var css = 30;
         var javaScript = 30;
 
@@ -112,7 +112,56 @@
         } else {
             통보 = '평균'+ avg + '점 불합격입니다'
         }
+        console.log(통보) */
+
+
+        //❗ prompt는 숫자를 입력하면 "80" 80이라는 문자로 인식하기 때문에
+        //  Number()로 감싸줘야 숫자로 인식함
+        var html = Number(prompt('HTML 점수를 입력하세요',''));
+        var css = Number(prompt('CSS 점수를 입력하세요',''));
+        var javaScript = Number(prompt('javaScript 점수를 입력하세요',''));
+        console.log(html+css+javaScript)
+
+        var avg=(html+css+javaScript)/3
+        var 통보;
+
+        if(avg>=60){
+            if(html<40){
+                통보 = 'html 40점미만 불합격입니다'
+            }else if(css<40){
+                통보 = 'css 40점미만 불합격입니다'
+            }else if(javaScript<40){
+                통보 = 'javaScript 40점미만 불합격입니다'
+            }else{
+                통보 = '축하합니다. 합격입니다'
+            }
+        } else {
+            통보 = '평균'+ avg + '점 불합격입니다'
+        }
         console.log(통보)
+
+
+
+        let 국어 = 60;
+        let 수학 = 97;
+        let 영어 = 50;
+
+        let 평균=(국어 + 수학 + 영어)/3
+        console.log(평균)
+
+        // 1)반올림
+        let 반올림 = Math.round(평균)//
+        console.log(반올림)
+        // 2)올림
+        let 올림 = Math.ceil(평균)//
+        console.log(올림)
+        // 3)버림(내림)
+        let 내림 = Math.floor(평균)//
+        console.log(내림)
+        // 4)소수점 반올림
+        let 소수점 = 평균.toFixed(2)//
+        console.log(소수점)
+        
 
 
 
