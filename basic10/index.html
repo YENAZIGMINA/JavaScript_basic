@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java basic 10 - for반복문</title>
+</head>
+<body>
+
+    <script>
+        let output="";
+        for(let i=0; i<=10; i++) {
+            for(let j=0; j<i; j++){
+            output+='*' // output = output + '*'
+            }
+            document.write(output)
+            document.write('<br/>')
+            output=""; // 아웃풋 초기화 (이전에 가졌던 찌꺼기 값을 없애기 위해)
+        }
+        
+
+        let output2="";
+        for(let i=0; i<=10; i++) {
+            for(let j=10; j>i; j--) {
+                output2+='*'
+            }
+            document.write(output2)
+            document.write('<br/>')
+            output2="";
+        }
+
+
+        let output3="";
+        for(let i=0; i<5; i++){
+            for(let j=5; j>i; j--){
+                output3+="&nbsp"; //&nbsp:띄워쓰기
+            }
+            for(let k=0; k<2*i - 1; k++){
+                output3+="*";
+            }
+            document.write(output3)
+            document.write('<br/>')
+            output3="";
+        }
+    </script>
+</body>
+</html>

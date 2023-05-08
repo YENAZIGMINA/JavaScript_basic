@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java basic 11 </title>
+</head>
+
+<body>
+    <script>
+        // ❗함수
+        // 함수는 하나의 실행문을 저장하고, 변수는 하나의 데이터를 저장하여 사용함
+        // 함수는 스크립트 실행문을 보관하는 역할을 하기때문에 반복사용되는 코드를 구조화 하거나 재활용을 목적으로 사용한다.
+
+        // ✔ 함수에서 사용되는 용어
+        // 매개변수 : 함수에 자료를 넘기기위한 변수
+        // 리턴값 : 함수를 실행하고 나오는 결과값
+        // 콜백함수 : 함수에 매개변수로 함수를 전달할 때 사용하는 함수
+        // 호출 : 함수 내부를 실행시킬 때 호출이라고 표현
+
+
+
+
+/*      for(let i=0; i<5; i++){
+            document.write("이것은 빨간색" + i + "입니다")
+            document.write(`이것은 빨간색${i}입니다<br/>`)
+        }
+        for(let i=0; i<5; i++){
+            document.write(`이것은 파란색${i}입니다<br/>`)
+        }
+        for(let i=0; i<5; i++){
+            document.write(`이것은 초록색${i}입니다<br/>`)
+        } */
+
+
+        function colorName(color){
+            for (let i = 0; i < 5; i++) {
+                document.write(`이것은 ${color}${i}입니다<br/>`)
+                //document.write("이것은" + color + i + "입니다<br/>")
+            }
+        }
+        colorName("빨간색"); //호출
+        colorName("파랑색");
+        colorName("초록색");
+
+        
+        //선언적 함수 (호이스팅 된다)
+        //가장 기본적으로 사용하는 함수의 형태입니다.
+        //기본적으로 함수는 함수 이름을 설정하고 함수이름을 호출해야 실행이 됩니다.
+
+        방앗간("팥")
+
+        function 방앗간(대야){
+            console.log(대야 + "떡입니다")
+        }
+        방앗간("쑥")
+        방앗간("무지개")
+
+
+
+        
+        function 간식(맛){
+            for (let taste=1; taste<=3; taste++){
+                document.write(`내가 좋아하는 ${맛}${taste} 초콜릿<br/>`)
+            }
+        }
+        간식("딸기")
+        간식("바나나")
+        간식("라즈베리")
+        간식("카페모카")
+    </script>
+
+</body>
+
+</html>

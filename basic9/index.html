@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 베이직9</title>
+</head>
+<body>
+    <script>
+        //제어문-반복문(for문:조건이 만족하는 동안 반복)
+
+/*      for(초기값-1번; 조건문-2번; 증가감식-4번){
+            실행문-3번
+        } */
+
+        for(let i=0; i<5; i++){
+            document.write(i+'<br>')
+        } //결과값 나가면 다시 for로 올라가서 반복되다가, 조건문-2번에 안맞으면 for문 탈출! 
+
+
+        let sum=0;
+        for(let i=0; i<=3; i++){
+            sum+=i; //sum=sum+i ✔우항값을 좌항값에 넣어라!
+        }
+        document.write(sum+'<br>')
+
+
+        //for문 안에 for문 또 들어갈 수 있음
+        for(let i=2; i<=4; i++){
+            for(let j=1; j<=9; j++){
+                document.write(i + 'X' + j + '=' + i*j + '<br>')
+            }
+        }
+
+
+        //나혼자 연습한것
+        let aaa=2;
+        for(let b=1; b<=4; b++){
+            aaa+=b; // aaa=aaa+b
+        }
+        document.write(aaa+'<br>')
+        
+
+        for(let c=1; c<=5; c++){
+            for(let k=2; k<=5; k++){
+                document.write(c + 'X' + k +'=' + c*k +'<br>')
+            }
+        }
+
+
+    </script>
+</body>
+</html>
