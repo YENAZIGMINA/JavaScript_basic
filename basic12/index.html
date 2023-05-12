@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="test">This is a heading</h1>
+    <button type="button" onclick="함수()">클릭하세요~!</button>
+    <!-- ❗onclick="함수()" : (스크립트 함수호출 기능) 버튼 클릭하면 스크립트에서 작성한 값 실행 -->
+
+
+    <script>
+        //let tit=document.getElementById("test");
+        let tit=document.querySelector("#test"); //콘솔에 태그자체가 찍힘
+        console.log(tit)
+
+        function 함수(){
+            tit.style.color="#f00"; //스크립트에서 heml스타일 주기
+            tit.style.backgroundColor="blue";
+            console.log("실행")
+        }
+    </script>
+
+
+</body>
+</html>

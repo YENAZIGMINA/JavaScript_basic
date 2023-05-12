@@ -23,20 +23,20 @@
 
 
 
-/*      for(let i=0; i<5; i++){
-            document.write("이것은 빨간색" + i + "입니다")
-            document.write(`이것은 빨간색${i}입니다<br/>`)
-        }
-        for(let i=0; i<5; i++){
-            document.write(`이것은 파란색${i}입니다<br/>`)
-        }
-        for(let i=0; i<5; i++){
-            document.write(`이것은 초록색${i}입니다<br/>`)
-        } */
+        /*      for(let i=0; i<5; i++){
+                    document.write("이것은 빨간색" + i + "입니다")
+                    document.write(`이것은 빨간색${i}입니다<br/>`)
+                }
+                for(let i=0; i<5; i++){
+                    document.write(`이것은 파란색${i}입니다<br/>`)
+                }
+                for(let i=0; i<5; i++){
+                    document.write(`이것은 초록색${i}입니다<br/>`)
+                } */
 
 
-        function colorName(color){
-            for (let i = 0; i < 5; i++) {
+        function colorName(color) {
+            for (let i=0; i<5; i++) {
                 document.write(`이것은 ${color}${i}입니다<br/>`)
                 //document.write("이것은" + color + i + "입니다<br/>")
             }
@@ -45,24 +45,24 @@
         colorName("파랑색");
         colorName("초록색");
 
-        
-        //선언적 함수 (호이스팅 된다)
+
+        //🧡선언적 함수 (호이스팅 된다)
         //가장 기본적으로 사용하는 함수의 형태입니다.
         //기본적으로 함수는 함수 이름을 설정하고 함수이름을 호출해야 실행이 됩니다.
 
-        방앗간("팥")
+        방앗간("팥") //호이스팅
 
-        function 방앗간(대야){
+        function 방앗간(대야) {
             console.log(대야 + "떡입니다")
         }
-        방앗간("쑥")
+        방앗간("쑥") //함수이름 호출
         방앗간("무지개")
 
 
 
-        
-        function 간식(맛){
-            for (let taste=1; taste<=3; taste++){
+        //연습
+        function 간식(맛) {
+            for (let taste = 1; taste <= 3; taste++) {
                 document.write(`내가 좋아하는 ${맛}${taste} 초콜릿<br/>`)
             }
         }
@@ -70,7 +70,124 @@
         간식("바나나")
         간식("라즈베리")
         간식("카페모카")
+
+
+        //✔ 두 개의 동일한 함수가 있는 경우에는 뒤에 있는 함수가 호출됨
+        function 샤넬미용실() {
+            document.write("머리를 해 드립니다.")
+        }
+
+        function 샤넬미용실() {
+            document.write("파마를 해 드립니다.")
+        }
+
+        샤넬미용실()
+
+        document.write("<br><br>")
+
+
+
+        //🧡익명함수 : 이름이 없는 함수
+        //함수의 이름이 없기때문에 변수에 넣어서 사용해야 함
+
+        //함수변수(); // 함수변수(); 미리부를 수 없다 ❌익명함수는 호이스팅 안됨! 
+        let 함수변수=function(){
+            //실행코드
+            document.write("익명함수 실행")
+        }
+
+        함수변수();
+
+
+
+        document.write("<br><br>")
+        //🧡매개변수가 있는 함수
+        //변수를 통해 함수의 값을 전달하는 함수
+
+        function 매개변수함수(매개변수1, 매개변수2){
+            document.write(매개변수1 + "와" + 매개변수2)
+        }
+        매개변수함수("딸기","바나나") //딸기는 매개변수1, 바나나는 매개변수2로 받음
+
+        document.write("<br><br>")
+        function 배달의민족(전화){
+            document.write(`여기는 ${전화} 입니다. 짜장면 2개 주세요`)
+        }
+        배달의민족("경성대점")
+
     </script>
+
+
+    <script>
+        //🧡리턴문(return)을 사용한 매개변수가 있는 함수
+        // 결과값이 있는 함수. return이라는 키워드를 이용하여 함수의 결과값을 출력하는 방법입니다. 리턴은 실행문을 강제 종료하는 역할도 함
+
+        function 리턴문(num){
+            return num * num
+            console.log("실행될까?") //리턴 만나서실행안됨/리턴보다 위에 있으면 실행됨
+        }
+        let result = 리턴문(3)
+        console.log(result) // 결과값 9
+
+
+
+        function 리턴문2(num, num2){
+            return num + num2
+        }
+
+        let result2 = 리턴문2(10, 20) //함수호출이라고 일컫음
+        console.log(result2) // 결과값 30
+
+    </script>
+
+
+    <script>
+        //재귀함수
+        //함수내에서 자신을 다시 호출하는 함수를 말한다.
+        //함수를 반복문처럼 사용할 때 이용함
+
+
+/*      function 재귀함수(){
+            실행문;
+            재귀함수();
+        }
+
+        재귀함수(); */
+
+        function 재귀함수(num){
+            if(num == 0){
+                document.write('함수의 실행이 종료됩니다.')
+            }else{
+                document.write('함수가 실행중입니다.<br>')
+                재귀함수(num - 1) // num만 작성하면 무한반복, 빠져나오려면 -1 추가
+            }
+        }
+
+        재귀함수(5); //5가 function 재귀함수 num에 들어가서 작동함
+
+        document.write('<br>')
+
+    </script>
+
+
+    <script>
+        //🧡콜백함수
+        //함수를 변수에 저장하고 변수를 함수의 인자로 사용하여 매개변수에 전달되는 함수
+
+        function 콜백함수(num){
+            for(let i=0; i<3; i++){
+                num(i)
+            }
+        }
+        var 인자변수 = function 인자(){
+            document.write('함수가 실행되었습니다.')
+            // var인자변수 ~ 변수전체가 콜백함수 num으로 들어가서 실행됨
+        }
+        콜백함수(인자변수);
+
+
+    </script>
+
 
 </body>
 
