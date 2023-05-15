@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <script>
+        //배열
+        let 음식=["짜장면","짬뽕","치킨"];
+
+/*      console.log(음식[1]) //짬뽕
+        음식[3]="탕수육";
+        console.log(음식)
+        음식[1]="잡채밥"; //원래 1번이던 짬뽕이 잡채밥으로 변경됨
+        console.log(음식)
+        음식.push("밀면"); // push는 추가
+        console.log(음식) */
+
+        //🎈엄청중요!!💛
+        for(let i=0; i<음식.length; i++){
+            document.write(음식[i])
+        }
+
+        음식.forEach(
+            function(item){
+                document.write(item , ",")
+                //document.write(item + ",")
+
+            }
+        )
+        //forEach 는 각각 하나씩 불러옴
+
+
+
+    </script>
+</body>
+</html>
