@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트-time</title>
+</head>
+<body>
+    <script>
+        let today = new Date();
+        console.log(today)
+
+        //❗ toDateString()매서드는 미국영어로 사람이 읽을 수 있는 형태로
+        //  date객체의 날짜 부분을 반환한다.
+        document.write(today.toDateString())
+        document.write('-toDateString()<br>')
+
+        //❗  Date객체의 날짜 부분을 지역의 언어에 맞는 문자열 표현으로 반환한다. 
+        document.write(today.toLocaleDateString())
+        document.write('-toLocaleDateString()<br>')
+
+        //❗Date객체의 날짜 시간부분을 지역의 언어에 맞는 문자열표현으로 반환한다
+        document.write(today.toLocaleTimeString())
+        document.write('-toLocaleTimeString()<br>')
+
+        //❗Date객체의 날짜의 문자열 표현을 지역언어에 맞는 형식으로 반환한다.
+        document.write(today.toLocaleString())
+        document.write('-toLocaleString()<br>')
+
+        //❗toTimeString()매서드는 Date객체의 시간부분을 미국영어권 사용형식 문자열로 반환한다.
+        document.write(today.toTimeString())
+        document.write('-toTimeString()<br>')
+
+
+        //UTC시간대
+        //협정 세계시(UTC)는 전세계 시간 연구소가 보유하는 시간의 척도
+
+        document.write(today.toUTCString()) //UTC시간대를 사용하여 날짜를 문자열로 반환
+        document.write('-toUTCString()') 
+
+    </script>
+</body>
+</html>

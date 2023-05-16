@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트-time3</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+
+    <style>
+      .clock {
+        font-family: 'Fredericka the Great', cursive;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        width: 310px; height: 300px;
+        /* padding-top: 20px; */
+        text-align: center;
+    }
+    .clock img {
+        width: 300px; height: 150px;
+    }
+    
+        .clock span {
+            color: #000;
+            /* font-weight: bold; */
+            opacity: 0.7;
+        }
+
+      .clock .time_box {}
+      .clock .time_box span {}
+      .clock .time_box .txt_lg {font-size: 75px;}
+      .clock .time_box .mark {}
+
+      .clock .date_box {font-size: 15px;}
+      .clock .date_box span {}
+      .clock .date_box .month {}
+      .clock .date_box .point {}
+      #day {
+        display: block;
+        margin-top: 5px;
+      }
+      .mark { 
+        font-size: 30px;
+        vertical-align: 18px;
+
+    }
+      .mark02 {}
+
+    </style>
+
+<body>
+    <!-- font-family: 'Fredericka the Great', cursive; -->
+
+    <div class="clock">
+        <img src="https://cdn.pixabay.com/photo/2017/05/23/05/33/flower-2336287_960_720.jpg" alt="꽃">
+
+        <div class="time_box">
+            <span class="txt_lg" id="hours"></span>
+            <span class="mark">:</span>
+            <span class="txt_lg" id="min"></span>
+            <span class="mark">:</span>
+            <span class="txt_lg" id="sec"></span>
+        </div>
+        <div class="date_box">
+            <span id="month"></span>
+            <span class="point">.</span>
+            <span id="date"></span>
+            <span class="point">.</span>
+            <span id="year"></span>
+            <span id="day"></span>
+        </div>
+    </div> <!-- .clock end -->
+
+    <script>
+        setInterval(function(){
+            let today=new Date();
+
+            let dayList=['일요일','월요일','화요일','수요일','목요일','금요일','토요일']
+            let dayListEn=['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
+
+
+            console.log(dayList[2]) //화요일 찍힘 (0부터 시작하니 차례대로)
+
+            let hh=addZero(today.getHours());//시
+            let mm=addZero(today.getMinutes());//분
+            let ss=addZero(today.getSeconds());//초
+            let YY=today.getFullYear();
+            let MM=today.getMonth() + 1; //자바스크립트는 0부터시작하니까 +1
+            let DD=today.getDate();
+            let dd=dayListEn[today.getDay()].toUpperCase();
+
+            document.querySelector("#hours").innerHTML=hh;
+            document.querySelector("#min").innerHTML=mm;
+            document.querySelector("#sec").innerHTML=ss;
+            document.querySelector("#year").innerHTML=YY;
+            document.querySelector("#month").innerHTML=MM;
+            document.querySelector("#date").innerHTML=DD;
+            document.querySelector("#day").innerHTML=dd;
+            console.log(ss)
+
+            function addZero(num){
+                return(num<10?"0"+num:''+num) //10보다 작은면 "0"을 addZero값에 넣어라
+            }
+
+        },1000)
+    </script>
+
+    </script>
+</body>
+
+</html>
