@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+/*         let name = "홍길동";
+        let age = 18;
+
+        //let person = {name: name, age: age};
+        let person = {name, age}; //키값과 변수이름이 같다면 줄일 수 있다.
+        console.log(person)
+
+        let person2={nameValue:name, ageValue:age}; //키값과 변수이름이 다르면 줄일 수 없다. (nameValue-변수이름 / name-키값 )
+        console.log(person2.nameValue) //홍길동 */
+        
+
+        //객체를 분해하는 과정
+        let 우리반여학생1={
+            name:"고민정",
+            age:20
+        }
+
+        //객체를 변수로 분리하고자 할 때
+/*         let name=우리반여학생1.name;
+        let age=우리반여학생1.age;
+        console.log(name,age) */
+
+/*         //위 두줄과 아래줄은 동일
+        let {name,age}=우리반여학생1;
+        console.log(name,age) */
+
+/*         let nameDiff=우리반여학생1.name;
+        let ageDiff=우리반여학생1.age;
+
+        let {nameDiff,ageDiff}=우리반여학생1;
+        console.log(nameDiff,ageDiff) //undefined undefined */
+
+
+        //배열을 변수에 담기(구조분해 문법)
+        let array=[1,2,3];
+        let one=array[0]
+        let two=array[1]
+        let three=array[2]
+        console.log(one,two,three)
+        //위 3줄과 아래내용 동일함
+        /* let [one,two,three]=array;
+        console.log(one,two,three) // 1 2 3 */
+
+
+
+        let [a,...rest]=array;
+        console.log(a, rest)
+
+        let [...rest2]=array;
+        console.log(a, rest2)
+
+
+        let 사람={
+            name:"박지은",
+            age:18,
+            run:true
+        }
+        /* let {name,age,run}=사람;
+        console.log(사람) */
+        let {name,...rest3}=사람;
+        console.log(name,rest3) //이름은 변수 name으로 받고, 나머지 객체는 묶인다
+
+
+
+
+    </script>
+</body>
+
+</html>
