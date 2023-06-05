@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>리액트 최신문법 index2</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         console.log(person2.nameValue) //홍길동 */
         
 
-        //객체를 분해하는 과정
+        //❗ 객체를 분해하는 과정
         let 우리반여학생1={
             name:"고민정",
             age:20
@@ -43,7 +43,7 @@
         console.log(nameDiff,ageDiff) //undefined undefined */
 
 
-        //배열을 변수에 담기(구조분해 문법)
+        //❗ 배열을 변수에 담기(구조분해 문법)
         let array=[1,2,3];
         let one=array[0]
         let two=array[1]
@@ -72,6 +72,49 @@
         let {name,...rest3}=사람;
         console.log(name,rest3) //이름은 변수 name으로 받고, 나머지 객체는 묶인다
 
+
+
+        let aa=[1,2];
+        let bb=[3,4];
+        let cc=[5,6];
+
+        let result = aa.concat(bb,cc); //aa를 bb,cc와 배열 연결하겠다
+        console.log(result)
+        let result2 =[...aa,...bb,...cc]; //최신문법
+        console.log(result2)
+
+
+
+        // ❗함수선언방식
+
+        /* function foo(){
+            console.log("실행")
+        } */
+
+        /* let foo =function(){
+            console.log("실행")
+        } */
+
+        let foo =()=>{
+            console.log("실행")
+        }
+
+        foo(); //함수 호출해야 실행됨
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+        /* let ft=function(){
+            return "리액트"
+        } */
+
+        /* let ft=()=>{
+            return "리액트"
+        } */
+
+        let ft=()=>"리액트" // ➰ return 한 줄만 있을 때 이렇게 줄이기 가능!
+
+        let result3 = ft(); // ()에 리턴값 담겨서 result3 값으로 console 확인가능
+        console.log(result3)
 
 
 
