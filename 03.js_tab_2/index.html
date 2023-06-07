@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_tab_02</title>
+    <!-- 폰트어썸 cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Tab menu</h2>
+
+    <div class="tab_wrap">
+        <div class="tab">
+            <button class="tablinks" id="defaultOpen" onclick="openCity(event,'London')">London</button> <!-- 함수 openCity 사용 -->
+            <button class="tablinks" onclick="openCity(event,'Paris')">Paris</button>
+            <button class="tablinks" onclick="openCity(event,'Tokyo')">Tokyo</button>
+        </div>
+    
+        <div id="London" class="tabcontent">
+            <span class="topright"><i class="fas fa-times"></i></span>
+            <h3>런던</h3>
+            <p>런던은 영국의 도시입니다.</p>
+        </div> <!-- /#London -->
+    
+        <div id="Paris" class="tabcontent">
+            <span class="topright"><i class="fas fa-times"></i></span>
+            <h3>파리</h3>
+            <p>파리는 프랑스의 도시입니다.</p>
+        </div> <!-- /#Paris -->
+    
+        <div id="Tokyo" class="tabcontent">
+            <span class="topright"><i class="fas fa-times"></i></span>
+            <h3>도쿄</h3>
+            <p>도쿄는 일본의 도시입니다.</p>
+        </div> <!-- /#Tokyo -->
+    </div> <!-- /tab_wrap -->
+    
+
+    <script src="main.js"></script>
+</body>
+</html>

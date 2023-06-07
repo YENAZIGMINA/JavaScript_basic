@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+h2 {}
+.tab_wrap {
+    width: 500px;
+    margin: 0 auto;
+}
+.tab {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+.tab button {
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer; /* 커서 올리면 마우스 손가락 모양으로 변경 */
+    font-size: 17px;
+    padding: 14px 16px;
+}
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tabcontent {
+    display: none;
+    position: relative;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.tabcontent .topright {
+    position: absolute;
+    top: 10px; right: 10px;
+}
+.tabcontent h3 {}
+.tabcontent p {}
+
+#London {}
+#Paris {}
+#Tokyo {}
