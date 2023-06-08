@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+
+.one {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+iframe {width: 100%;}
+
+
+.map {
+    width: 500px; height: 340px;
+    margin-left: auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.map iframe {width: 100%;}

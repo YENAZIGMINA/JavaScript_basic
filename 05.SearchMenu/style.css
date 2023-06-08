@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'RixInooAriDuriR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+li {list-style: none;}
+a {color: #222; text-decoration: none;}
+
+
+body>h2 {
+    font-family: 'RixInooAriDuriR';
+    text-align: center;
+    margin: 40px 0;
+    font-size: 50px;
+    color: #ff5ba2;
+}
+.search_menu {
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+}
+.search_menu .left {
+    width: 35%;
+    background-color: #ff5ba2;
+    padding: 15px;
+}
+.search_menu .right {
+    width: 65%;
+    background-color: #ff9bd5;
+    padding: 15px;
+}
+.search_menu h2 {color: #ffe83c; margin-bottom: 20px;}
+
+#mySearch {
+    width: 100%;
+    font-size: 18px;
+    padding: 11px;
+    border: 2px solid #ffe83c;
+}
+#myMenu li {}
+#myMenu li a {
+    display: block;
+    padding: 12px; 
+    color: #fff;}
+#myMenu li a:hover {
+    background-color: #ffe83c;
+    color: #ff5ba2;
+    font-weight: bold;
+}
+.right p {
+    color: #bb336e;
+    padding: 25px;
+    border-bottom: 1px dashed #ff5ba2;
+
+}
