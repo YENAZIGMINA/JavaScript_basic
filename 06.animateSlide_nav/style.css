@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Cafe24ClassicType-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+
+*{margin: 0; padding: 0;}
+a {text-decoration: none; color: #3d3d3d;}
+
+
+body {
+    background: url(https://cdn.pixabay.com/photo/2022/10/11/21/58/texture-7515225_1280.jpg) no-repeat;
+    background-size: cover;
+}
+.slidenav {
+    position: fixed;
+    width: 0px; height: 100%;
+    top: 0; left: 0;
+    background-color: #456680;
+    padding-top: 60px;
+    overflow: hidden;
+    transition: .3s;
+}
+.slidenav a {
+    font-size: 27px;
+    display: block;
+    padding: 15px 8px 15px 30px;
+    color: #a4c6e6;
+    font-family: 'Cafe24ClassicType-Regular';
+}
+.slidenav a:hover {
+    color: #fff;
+}
+.slidenav .closebtn {
+    position: absolute;
+    top: 0; right: 25px;
+    font-size: 36px;
+}
+
+#main{
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    padding: 67px 30px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+#main h2 {
+    font-size: 30px;
+    color: #2f475a;
+    margin-bottom: 30px;
+}
+#main p {
+    line-height: 1.7;
+    color: #2f475a;
+}
+#main span {
+    color: #2f475a;
+    font-size: 35px;
+    position: absolute;
+    top: 67px; left: 490px;
+}

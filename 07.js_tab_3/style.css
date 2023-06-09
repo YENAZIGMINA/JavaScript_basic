@@ -1,0 +1,44 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+
+.tab h3{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.tablink {
+    float: left; width: 25%;
+    font-size: 17px;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    border: none; outline: none;
+    cursor: pointer;
+    background-color: #555;
+    color: #fff;
+}
+.tablink:hover {
+    background-color: #777;
+}
+
+.tabcontent {
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    display: none;
+}
+.tabcontent img {
+    height: 500px;
+    margin-top: 20px;
+}
+#London {
+    background-color: rgb(177, 129, 255);
+}
+#Paris {
+    background-color: rgb(227, 168, 255);
+}
+#Tokyo {
+    background-color: rgb(255, 169, 216);
+}
+#Oslo {
+    background-color: rgb(255, 215, 142);
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: #000;}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    transition: .3s;
+    display: flex;
+    gap: 15px;
+    text-align: center;
+}
+#navbar a {
+    display: block;
+    color: #f2f2f2;
+    padding: 15px;
+    font-size: 17px;
+}
+
+.main {
+    padding: 15px 15px 200vh;
+}

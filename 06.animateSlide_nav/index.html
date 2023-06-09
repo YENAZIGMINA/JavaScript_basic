@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이트 slide nav</title>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mySlidenav" class="slidenav">
+        <a href="javascript:void(0)" class="closebtn"
+        onclick="closeNav()">
+            <i class="fas fa-times"></i>
+        </a>
+        <!-- ✔javascript:void(0) ->클릭하면 위로 튕기는 현상 index에서 막는방법 -->
+        <a href="#">About</a>
+        <a href="#">Service</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div> <!-- /#mySlidenav -->
+
+    <div id="main">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, sunt.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, sunt.</p>
+        <span onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </span>
+    </div> <!-- /#main -->
+
+    <script src="main.js"></script>
+</body>
+</html>

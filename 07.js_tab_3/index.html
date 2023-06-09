@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>tab_menu_3</title>
+</head>
+<body>
+    
+    <div class="tab">
+        <h2>tab_menu</h2>
+        <div id="London" class="tabcontent">
+            <h3>런던</h3>
+            <p>런던은 영국의 도시입니다.</p>
+            <img src="img/skyline-gd8ce6b9d4_1280.png" alt="런던">
+        </div>
+
+        <div id="Paris" class="tabcontent">
+            <h3>파리</h3>
+            <p>파리는 프랑스의 도시입니다.</p>
+            <img src="img/eiffel-tower-g98ef2e2b0_1280.png" alt="파리">
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <h3>도쿄</h3>
+            <p>도쿄는 일본의 도시입니다.</p>
+            <img src="img/japan.png" alt="도쿄">
+        </div>
+        <div id="Oslo" class="tabcontent">
+            <h3>오슬로</h3>
+            <p>오슬로는 노르웨이의 도시입니다.</p>
+            <img src="img/oslo.png" alt="오슬로">
+        </div>
+
+        <button class="tablink" id="defaultOpen" onclick="openCity('London',this,'rgb(177, 129, 255)')">Lodon</button>
+        <button class="tablink" onclick="openCity('Paris',this,'rgb(227, 168, 255)')">Paris</button>
+        <button class="tablink" onclick="openCity('Tokyo',this,'rgb(255, 169, 216)')">Tokyo</button>
+        <button class="tablink" onclick="openCity('Oslo',this,'rgb(255, 215, 142)')">Oslo</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
