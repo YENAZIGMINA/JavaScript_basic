@@ -12,6 +12,7 @@ function openCity(cityName, elem, color){
     }
     elem.style.backgroundColor=color;
     document.getElementById(cityName).style.display="block";
+    //❗cityName은 매개변수로 첫번째 인자값을 받아왔으므로 ''를 안넣어도 됨
 
 }
 
