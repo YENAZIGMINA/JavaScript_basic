@@ -3,15 +3,17 @@
     //toUpperCase 대문자로
     //.value --> input태그에 적힌 값을 확인
     let filter = input.value.toUpperCase();
+    //❗toUpperCase주는 이유는 대소문자 구분없이 사용자가 입력했을 때 , 대소문자의 모든 값을 다 받을 수 있도록 설정
     //console.log(filter)
     let ul = document.getElementById('myMenu');
     let li = ul.getElementsByTagName('li');
+    //❗getElementsByTagName는 배열로 만들어짐
     //console.log(li)
     for(let i=0; i<li.length; i++){
         //a태그 배열후, [0]으로 li에 작성한 문자배열
         let a = li[i].getElementsByTagName('a')[0]; 
         //innerHTML --> a태그안 글자만 콘솔에
-        console.log(a.innerHTML.toUpperCase())
+        console.log(a.innerHTML.toUpperCase())  //console창에만 대문자로 찍힘
 
         if(a.innerHTML.toUpperCase().indexOf(filter)>-1){
             //-1보다 크냐는 것은 a.innerHTML에 검색한 텍스트가 존재하냐고 묻는 것
@@ -27,7 +29,7 @@
 
 function myFunction (){
     let input = document.getElementById('mySearch');
-    let filter = input.value.toUpperCase();
+    let filter = input.value.toUpperCase(); 
     //console.log(filter)
     let ul = document.getElementById('myMenu');
     let li = ul.getElementsByTagName('li');
@@ -45,3 +47,6 @@ function myFunction (){
         
     }
 }
+
+
+
