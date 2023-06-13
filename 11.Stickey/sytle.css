@@ -11,6 +11,12 @@ a{text-decoration: none; color: #333;}
     display: flex;
     padding: 20px;
     background-color: #333;
+    box-sizing: border-box; /* ✔ 밑나중에 해결함 : .sticky붙였을 때 w100%주니 여기서 준 padding: 20px; 때문에 옆으로 화면이 밀리면서 넘쳐나서 해결 */
+}
+#navbar.sticky {
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%;
 }
 #navbar-right {
     margin-left: auto;
@@ -21,4 +27,6 @@ a{text-decoration: none; color: #333;}
 #navbar a {
     color: #f2f2f2f2;
 }
+
+#navbar.sticky + .main {padding-top: 20px;} /* ❗ +는 동생을 부를 때 */
 .main {padding: 16px 16px 200vh;}
