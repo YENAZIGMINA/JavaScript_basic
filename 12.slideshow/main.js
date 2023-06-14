@@ -41,7 +41,19 @@ function currentSlide(n){
 
 
 
-//setInterval(function(){},시간)
-setInterval(() => {
+// 자동재생 setInterval(function(){},시간)
+/* setInterval(() => {
     plusSlides(1)
+}, 3000); */
+
+
+//자동멈춤 - ❗ 변수에 넣어서 해야함!
+let stopSlide = setInterval(function(){
+    plusSlides(1);
 }, 3000);
+
+let slideshowCon=document.getElementById('slideshow-container');
+slideshowCon.addEventListener("mouseenter",function(){
+    //setInterval멈추기 //mouseenter : 마우스올리면~
+    clearInterval(stopSlide)
+})

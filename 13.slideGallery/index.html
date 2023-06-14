@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideGallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Slider Gallery</h2>
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1/6</div>
+            <img src="https://cdn.pixabay.com/photo/2020/10/05/19/55/hamburger-5630646_1280.jpg" alt="햄버거">
+        </div> <!-- /mySlides -->
+
+        <div class="mySlides">
+            <div class="numbertext">2/6</div>
+            <img src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg" alt="피자">
+        </div> <!-- /mySlides -->
+
+        <div class="mySlides">
+            <div class="numbertext">3/6</div>
+            <img src="https://cdn.pixabay.com/photo/2021/04/05/14/48/cheese-platter-6153716_1280.jpg" alt="치즈">
+        </div> <!-- /mySlides -->
+
+        <div class="mySlides">
+            <div class="numbertext">4/6</div>
+            <img src="https://cdn.pixabay.com/photo/2017/06/16/07/00/sandwich-2408026_1280.jpg" alt="빵">
+        </div> <!-- /mySlides -->
+
+        <div class="mySlides">
+            <div class="numbertext">5/6</div>
+            <img src="https://cdn.pixabay.com/photo/2018/10/19/02/25/cheese-3757745_1280.jpg" alt="과일">
+        </div> <!-- /mySlides -->
+
+        <div class="mySlides">
+            <div class="numbertext">6/6</div>
+            <img src="https://cdn.pixabay.com/photo/2014/04/22/02/55/pasta-329521_1280.jpg" alt="파스타">
+        </div> <!-- /mySlides -->
+
+        <a href="#" class="prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
+        <a href="#" class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>        
+    </div> <!-- /container -->
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="https://cdn.pixabay.com/photo/2020/10/05/19/55/hamburger-5630646_1280.jpg" alt="햄버거" onclick="currentSlide(1)">
+        </div> <!-- /column -->
+        <div class="column">
+            <img class="demo cursor" src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg" alt="피자" onclick="currentSlide(2)">
+        </div> <!-- /column -->
+        <div class="column">
+            <img class="demo cursor" src="https://cdn.pixabay.com/photo/2021/04/05/14/48/cheese-platter-6153716_1280.jpg" alt="치즈" onclick="currentSlide(3)">
+        </div> <!-- /column -->
+        <div class="column">
+            <img class="demo cursor" src="https://cdn.pixabay.com/photo/2017/06/16/07/00/sandwich-2408026_1280.jpg" alt="빵" onclick="currentSlide(4)">
+        </div> <!-- /column -->
+        <div class="column">
+            <img class="demo cursor" src="https://cdn.pixabay.com/photo/2018/10/19/02/25/cheese-3757745_1280.jpg" alt="과일" onclick="currentSlide(5)">
+        </div> <!-- /column -->
+        <div class="column">
+            <img class="demo cursor" src="https://cdn.pixabay.com/photo/2014/04/22/02/55/pasta-329521_1280.jpg" alt="파스타" onclick="currentSlide(6)">
+        </div> <!-- /column -->
+    </div> <!-- /row -->
+
+
+    <script src="main.js"></script>
+</body>
+</html>
