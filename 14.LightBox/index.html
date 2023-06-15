@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ligh box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>🍭 Light Box 🍰</h2>
+    <div class="row">
+        <div class="column">
+            <img src="https://cdn.pixabay.com/photo/2022/02/26/21/35/candies-7036390_1280.jpg"
+                class="hover-shadow cursor" onclick="openModal(); currentSlide(1)">
+        </div><!-- /column -->
+
+        <div class="column">
+            <img src="https://cdn.pixabay.com/photo/2019/04/19/17/48/cake-balls-4139982_1280.jpg"
+                class="hover-shadow cursor" onclick="openModal(); currentSlide(2)">
+        </div><!-- /column -->
+
+        <div class="column">
+            <img src="https://cdn.pixabay.com/photo/2016/09/18/20/25/candy-1678933_1280.jpg" class="hover-shadow cursor"
+                onclick="openModal(); currentSlide(3)">
+        </div><!-- /column -->
+
+        <div class="column">
+            <img src="https://cdn.pixabay.com/photo/2017/01/04/19/41/candes-1952997_1280.jpg"
+                class="hover-shadow cursor" onclick="openModal(); currentSlide(4)">
+        </div><!-- /column -->
+    </div> <!-- /row -->
+
+
+    <!-- ✔ 클릭하면 나타나는 큰 이미지 -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">
+            <i class="fas fa-times"></i>
+        </span> <!-- /close, cursor -->
+
+        <div class="modal-content">
+            <div class="mySlides">
+                <div class="numbertext">1/4</div>
+                <img src="https://cdn.pixabay.com/photo/2022/02/26/21/35/candies-7036390_1280.jpg" alt="캔디">
+            </div> <!-- /mySlides -->
+
+            <div class="mySlides">
+                <div class="numbertext">2/4</div>
+                <img src="https://cdn.pixabay.com/photo/2019/04/19/17/48/cake-balls-4139982_1280.jpg" alt="캔디">
+            </div> <!-- /mySlides -->
+
+            <div class="mySlides">
+                <div class="numbertext">3/4</div>
+                <img src="https://cdn.pixabay.com/photo/2016/09/18/20/25/candy-1678933_1280.jpg" alt="캔디">
+            </div> <!-- /mySlides -->
+
+            <div class="mySlides">
+                <div class="numbertext">4/4</div>
+                <img src="https://cdn.pixabay.com/photo/2017/01/04/19/41/candes-1952997_1280.jpg" alt="캔디">
+            </div> <!-- /mySlides -->
+
+
+            <a href="#" class="prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
+
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div> <!-- /caption-container -->
+
+            <div class="row">
+                <div class="column">
+                    <img src="https://cdn.pixabay.com/photo/2022/02/26/21/35/candies-7036390_1280.jpg"
+                        class="demo cursor" alt="캔디1" onclick="currentSlide(1)">
+                </div><!-- /column -->
+                <div class="column">
+                    <img src="https://cdn.pixabay.com/photo/2019/04/19/17/48/cake-balls-4139982_1280.jpg"
+                        class="demo cursor" alt="캔디2" onclick="currentSlide(2)">
+                </div><!-- /column -->
+                <div class="column">
+                    <img src="https://cdn.pixabay.com/photo/2016/09/18/20/25/candy-1678933_1280.jpg" class="demo cursor" alt="캔디3"
+                        onclick="currentSlide(3)">
+                </div><!-- /column -->
+                <div class="column">
+                    <img src="https://cdn.pixabay.com/photo/2017/01/04/19/41/candes-1952997_1280.jpg"
+                        class="demo cursor" alt="캔디4" onclick="currentSlide(4)">
+                </div><!-- /column -->
+            </div> <!-- /row -->
+        </div> <!-- /modal-content -->
+    </div> <!-- /#myModal -->
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

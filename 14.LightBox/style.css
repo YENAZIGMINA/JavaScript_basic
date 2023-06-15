@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{margin: 0; padding: 0;}
+
+body {background-color: #ff70b7;}
+img {
+    width: 100%;
+    display: block;
+}
+h2 {
+    font-family: 'yg-jalnan';
+    text-align: center;
+    padding: 30px 0;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.row {
+    display: flex;
+    gap: 2%;
+    width: 1000px;
+    margin: 0 auto;
+}
+.row .column {
+    width: 23.5%;
+}
+.cursor {cursor: pointer;}
+img.hover-shadow {transition: .3s;}
+img.hover-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25),
+                0 6px 20px rgba(0,0,0,0.25);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #ffcbee;
+    z-index: 100;
+    padding-top: 100px;
+}
+.modal .modal-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    top: 10px;
+    position: relative;
+}
+.modal .close {
+    position: absolute;
+    top: 20px; right: 30px;
+    color: #ff70b7;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.modal .numbertext {
+    position: absolute;
+    color: #ff70b7;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+.modal .prev, .modal .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: #ff70b7;
+    font-size: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+.modal .next {
+    right: 0;
+}
+.modal .prev:hover, .modal .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+}
+
+.modal .row {
+    margin-top: 30px;
+}
