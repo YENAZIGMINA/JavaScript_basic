@@ -1,0 +1,48 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+a {text-decoration: none; color: #222;}
+li {list-style: none;}
+
+body{
+    height: 500vh;
+    background-color: #ffe47a;
+}
+::-webkit-scrollbar {
+    display: none;
+  } /* ❗🎀스크롤 기능은 하지만 스크롤바 없애기 */
+
+.world{position: fixed;
+left: 0; top: 0;
+width: 100vw; height: 100vh;
+perspective: 1000px;
+}
+
+.world .stage{
+    position: absolute;
+    left: 0; top: 0; width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+.world .stage .house{width: 100vw; height: 100vh;
+transform-style: preserve-3d;
+transform: translateZ(-490vw);}
+
+.world .stage .wall{position: absolute;
+left: 0; top: 0; width: 100vw; height: 100vh;
+background-color: rgba(255,255,255,0.8);}
+
+.world .stage .wall-left{width: 1000vw;
+background-color: #fff4ab;
+transform: rotateY(90deg) translateZ(-500vw);
+}
+.world .stage .wall-right{
+    width: 1000vw;
+background-color: #fff4ab;
+transform: rotateY(90deg) translateZ(-400vw);
+}
+
+.world .stage .wall-front{}
+.world .stage .wall-front-a{transform: translateZ(300vw);}
+.world .stage .wall-front-b{transform: translateZ(50vw);}
+.world .stage .wall-front-c{transform: translateZ(-200vw);}
+.world .stage .wall-front-d{transform: translateZ(-500vw);}

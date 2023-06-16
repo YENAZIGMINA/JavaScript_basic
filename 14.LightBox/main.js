@@ -29,6 +29,12 @@ function showSlides(n){
     for(let i=0; i<slides.length; i++){
         slides[i].style.display="none";
     }
+    for(let i=0; i<dots.length; i++){
+        dots[i].classList.remove('active'); // active붙은 이미지는 opacity1 효과
+    }
 
     slides[slideIndex - 1].style.display="block";
+    dots[slideIndex - 1].classList.add('active');
+
+    captionText.innerHTML=dots[slideIndex - 1].alt;
 }
