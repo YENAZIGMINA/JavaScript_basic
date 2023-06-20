@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <div class="wrapper">
+            <div class="box-area">
+                <div class="box box-front"><h2>1</h2></div> <!-- /box-front -->
+                <div class="box box-right"><h2>2</h2></div> <!-- /box-right -->
+                <div class="box box-back"><h2>3</h2></div> <!-- /box-back -->
+                <div class="box box-left"><h2>4</h2></div> <!-- /box-left -->
+                <div class="box box-top"><h2>5</h2></div> <!-- /box-top -->
+                <div class="box box-bottom"><h2>6</h2></div> <!-- /box-bottom -->
+            </div> <!-- /box-area -->
+    
+            <div class="rotate_x-button">
+                <button class="roteate-x-bottom" onclick="rotateXAis(-1)">아래</button>
+                <button class="roteate-x-top" onclick="rotateXAis(1)">위</button>
+            </div> <!-- /rotate_x-button -->
+    
+            <div class="rotate_y-button">
+                <button class="roteate-y-bottom" onclick="rotateYAis(-1)">오른쪽</button>
+                <button class="roteate-y-top" onclick="rotateYAis(1)">왼쪽</button>
+            </div> <!-- /rotate_y-button -->
+    
+            <div class="front" onclick="front()">정면</div>
+        </div> <!-- /wrapper -->
+    </section>
+
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
