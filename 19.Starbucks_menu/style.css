@@ -1,0 +1,100 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #222;}
+
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding-top: 20px;
+    height: 120px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    background: linear-gradient(to bottom, #f6f5ef 120px, #2c2a29 120px);
+    overflow: hidden;
+}
+h1 {
+    width: 75px; height: 75px;
+}
+h1 a {
+    background: url(https://www.starbucks.co.kr/common/img/common/logo.png) no-repeat center;
+    display: block;
+    height: 100%;     width: 100%;
+    overflow: hidden;
+    text-indent: -20000px;
+}
+
+.top_menu {
+    right: 93px; top: 15px;
+}
+.top_menu ul {
+    display: flex;
+    width: 620px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+}
+.top_menu ul li {}
+.top_menu ul li a {
+    font-size: 13px;
+    color: #555;
+    display: block;
+    text-align: center;
+}
+
+#search_form {position: relative;}
+#search_form label {
+    font-size: 0;
+}
+#search_form input {
+    height: 24px; 
+}
+#search_form button {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 8px; top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.main_menu.main_menu {
+    margin-top: 20px;
+    width: 800px;
+    justify-content: flex-start;
+}
+
+.main_menu ul {}
+.main_menu li {}
+.main_menu li a {
+    text-transform: uppercase;
+    text-align: center;
+    height: 56px;
+    line-height: 20px;
+    padding: 10px 15px 0;
+}
+.main_menu li a:hover {
+    background-color: #2d2a29;
+    color: #690;
+}
+
+.sub_menu {
+    position: absolute;
+    left: 0; right: 0;
+    justify-content: flex-start;
+}
+.main_menu li:hover .sub_menu {
+    display: flex;
+}
+.sub_menu dl {
+    width: 20%;
+}
+.sub_menu dl dt {color: #fff;}
+.sub_menu dl dd {color: #999;}
