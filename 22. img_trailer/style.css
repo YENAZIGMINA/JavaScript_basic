@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+/* font-family: 'Gravitas One', cursive; */
+
+
+*{margin: 0; padding: 0;}
+/* 변수만들기 : root */
+:root{
+    --primary:#bd78d8;
+    --second:#8ae8ff;
+}
+
+.app {
+    background-color: var(--primary); /* css에서 변수부르기 var */
+    color: var(--second);
+}
+
+.hero {
+    position: relative;
+    width: 100%; height: 100%;
+}
+.hero .hero_wrapper {
+    width: 100%; height: 100%;
+}
+.hero .hero_wrapper .hero_gallery {}
+.hero .hero_wrapper .hero_title {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%); /* 안먹힐 때는 부모들 w,h값 확인하고 처리하기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .hero_wrapper .hero_title .ofh {
+    overflow: hidden;
+}
+.hero .hero_wrapper .hero_title .ofh h1 {
+    font-family: 'Gravitas One', cursive;
+    font-size: 16vw;
+    text-align: center;
+}

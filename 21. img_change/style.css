@@ -1,0 +1,13 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+
+
+.main {
+    padding-top: 5%;
+    padding-left: 2%;
+}
+.main h1 {}
+.main h2 {
+    margin: 30px;
+}
