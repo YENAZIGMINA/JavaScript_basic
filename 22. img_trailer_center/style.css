@@ -19,26 +19,26 @@ html{font-size: 10px;}
 
 .hero {
     position: relative;
-    width: 100%; height: 100%;
+    width: 100%; height: 100%; /* ➰부모처리 */
 }
 .hero .hero_wrapper {
-    width: 100%; height: 100%;
+    width: 100%; height: 100%; /* ➰부모처리 */
 }
 
 .hero_media {
     /* main.js 만든 img 태그 */
-    position: fixed; /* 중앙에 넣고 싶으면 fixed 말고 absolute 주고 감싸는 태그에 relative 주기 */
+    position: absolute; /* 중앙에 넣고 싶으면 fixed 말고 absolute 주고 감싸는 태그에 relative 주기 */
     object-fit: contain; /* ❗contain : 자기자신 온전하게 나오는 값 */
     z-index: 999;
     pointer-events: none; /* ❗ 마우스에 모양줬을 때 아래요소 클릭하고 하는데 방해안되도록 */
     transform: scale(0.5);
     transition: 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);;
 }
-
+.hero_wrapper {position: relative;}
 .hero .hero_wrapper .hero_title {
     position: absolute;
     left: 50%; top: 50%;
-    transform: translate(-50%, -50%); /* 안먹힐 때는 부모들 w,h값 확인하고 처리하기 */
+    transform: translate(-50%, -50%); /* ➰안먹힐 때는 부모들 w,h값 확인하고 처리하기 */
     display: flex;
     justify-content: center;
     align-items: center;
