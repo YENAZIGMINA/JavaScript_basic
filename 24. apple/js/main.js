@@ -34,9 +34,31 @@
 
     function calcValues(values, currentYOffset) {
         let rv;
-        let scrollRatio = currentYOffset / sceneInfo[currentScene].scrollHeight;
+        let scrollHeight=sceneInfo[currentScene].scrollHeight;
+        let scrollRatio = currentYOffset / scrollHeight;
 
-        rv = scrollRatio * (values[1] - values[0]) + values[0]
+        if(values.length === 3){
+            //values의 요소가 3개인지 확인
+            //start~end 사이에 애니메이션이 실행
+            //시작점 구하기
+            let partScrollStart=values[2].start*scrollHeight;
+            let partScrollEnd=values[2].end*scrollHeight;
+            let partScrollHegiht=partScrollEnd - partScrollStart;
+            
+            if(currentYOffset>=partScrollStart && currentYOffset<=partScrollEnd){
+                rv=(currentYOffset - partScrollStart)/partScrollHegiht*(values[1]-values[0])+values[0] //비율구하기
+            }else if(currentYOffset<partScrollStart){
+                    rv=values[0];
+                }else if(currentYOffset<partScrollEnd){
+                    rv=values[1];
+            }
+        }else{
+            rv = scrollRatio * (values[1] - values[0]) + values[0]
+        }
+
+
+
+
         return rv;
     }
 
@@ -45,13 +67,20 @@
     function playAnimation() {
         let objs = sceneInfo[currentScene].objs;
         let values = sceneInfo[currentScene].values;
+        
         let currentYOffset = yOffset - prevScrollHeight;
-        console.log(currentScene, currentYOffset)
+        let scrollHeight=sceneInfo[currentScene].scrollHeight;
+        let scrollRatio=currentYOffset/scrollHeight;
+        console.log(scrollRatio)
         switch (currentScene) {
             case 0:
                 //console.log('0 play');
-                let messageA_opacity_in = calcValues(values.messageA_opacity_in, currentYOffset)
-                objs.MessageA.style.opacity = messageA_opacity_in;
+                if(scrollRatio<=0.22){
+                    objs.MessageA.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
+                }else{
+                    objs.MessageA.style.opacity = calcValues(values.messageA_opacity_out, currentYOffset);
+                }
+                
                 console.log(messageA_opacity_in)
                 break;
             case 1:

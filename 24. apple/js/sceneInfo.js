@@ -10,7 +10,10 @@ const sceneInfo=[{
         MessageC:document.querySelector('#scroll-section-0 .main-message.c'),
         MessageD:document.querySelector('#scroll-section-0 .main-message.d'),
     },
-    values:{messageA_opacity_in:[0,1,{start:0.1,end:0.2}]}
+    values:{
+        messageA_opacity_in:[0,1,{start:0.1,end:0.2}],
+        messageA_opacity_out:[1,0,{start:0.25,end:0.3}],
+    }
 },{
     //1
     type:"normal", //sticky기능이없는 것
