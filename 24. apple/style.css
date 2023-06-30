@@ -115,6 +115,9 @@ a {
 #scroll-section-2 .b {
     top: 10%; left: 40%;
 }
+#scroll-section-2 .c {
+    top: 15%; left: 45%;
+}
 
 .mid-message {
     font-size: 2rem;
@@ -138,6 +141,7 @@ a {
     position: fixed;
     left: 0; width: 100%;
     display: none;
+    opacity: 0;
 }
 
 
