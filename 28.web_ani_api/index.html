@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web_ani_api</title>
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            background-color: rgb(170, 221, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+
+    <script>
+        let box=document.querySelector('.box');
+
+        //box.animate([keyframes],{option})
+        box.animate([
+            {transform:'translateX(0)', opacity:0},
+            {transform:'translateX(-50px)', opacity:1, offset:0.6},
+            {transform:'translateX(200px)', opacity:1}
+        ],{
+            duration:1000,
+            easing:'linear',
+            fill:'forwards',
+            iterations:Infinity,
+            direction:'alternate'
+        })
+
+        // ✔ CSS -> Script
+        //animation-duration --> duration
+        //animation-delay --> delay
+        //animation-direction --> direction
+        //fill-mode(애니메이션 상태) --> fill
+        //timing-function (ease) --> easing
+        //iteration-conunt --> iteration  
+
+
+    </script>
+</body>
+</html>

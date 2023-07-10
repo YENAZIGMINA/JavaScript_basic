@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+
+
+    <script>
+        //캔버스요소 가져오기(필수작성)
+        let canvas=document.getElementById('myCanvas');
+        let context=canvas.getContext('2d');
+
+        //이미지생성
+        //let image=new Image(); //이미지 태그만들기 아래와 같은 방식
+        let image=document.createElement('img'); //이미지 태그만들기
+        image.src='https://cdn.pixabay.com/photo/2023/06/21/14/17/mountain-8079469_1280.jpg';
+
+        //context.drawImage(image,x,y,width,height) //변수명, x,y위치부터 이미지가 그려지겠다~
+        context.drawImage(image,0,0,400,400) 
+
+    </script>
+</body>
+</html>
