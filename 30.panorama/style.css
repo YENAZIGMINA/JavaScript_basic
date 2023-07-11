@@ -1,0 +1,52 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+
+.sj_panorama {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    padding-top: 20%;
+}
+.sj_panorama .text_area{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.sj_panorama .text_area h2 {
+    color: #fff;
+    font-size: 100px;
+}
+.sj_panorama .pano_wrap {white-space: nowrap;}
+.sj_panorama .pano_wrap .list {
+    display: inline-block;
+    white-space: nowrap;
+}
+.sj_panorama .pano_wrap .list li {
+    display: inline-block;
+    width: 300px;
+}
+
+/* 재생버튼 */
+.sj_panorama .controls {
+    position: absolute;
+    top: 20px; right: 20px;
+    z-index: 20;
+}
+.sj_panorama .controls a {font-size: 40px;}
+.sj_panorama .controls a i {
+    position: absolute;
+    right: 0; top: 0;
+    color: #fff;
+}
+.sj_panorama .controls a i em {
+    text-indent: -9999rem; /* 글자 안보이게 처리 */
+    font-size: 0;
+    line-height: 0;
+}
+
+.sj_panorama .controls a.active .play {opacity: 0;}
+.sj_panorama .controls a .play {opacity: 1;}
+.sj_panorama .controls a.active .pause {opacity: 1;}
+.sj_panorama .controls a .pause {opacity: 0;}
