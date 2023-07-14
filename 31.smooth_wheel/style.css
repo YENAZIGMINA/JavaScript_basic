@@ -1,0 +1,13 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+main {
+    overflow: hidden;
+}
+.hero_gallery {}
+.hero_gallery .hero_gallery_wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    width: max-content; /* 내 자식이 가진 넓이만큼 내 넓이로 설정 */
+}
