@@ -1,0 +1,31 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+
+body {background-color: #3459d4;}
+.airplane-scroll-timeline {
+    position: relative;
+    height: 4305px; /* 중요!  - 내 사이트에 맞게 값 수정*/
+    margin: 200px 0;
+}
+.airplane {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100px;
+    offset-distance: 100%;
+    offset-rotate: auto 90deg; /* 라인 따라다니도록 방향설정 */
+    offset-path: path("m523.89,4304.71v-102.65c0-380.2-349.01-699.56-349.01-699.56-444.83-376.4,250.93-486.65,250.93-486.65,444.83-102.65,557.68-250.93,557.68-250.93,283.93-319.37-486.96-646.34-486.96-646.34-258.91-112.16-314.04-296.55-314.04-296.55C-5.24,1295.45,395.39,1206.1,502.03,1255.07c65,29.84,105.64,109.85,90,179.91-35.06,157.03-234.66,151.32-234.66,151.32-287.05,0-340.67-193.9-340.67-193.9-85.15-285.15,215.21-534.18,215.21-534.18,309.81-245.7,291.98-636.53,291.98-636.53V0"); /* 경로 작성 (path 복붙) */
+    transform: rotate(180deg);
+}
+.flight-path {
+    fill: none;
+    stroke: white;
+    stroke-width: 3px;
+    stroke-dasharray: 14px 14px; /* 선, 갭 - 같은 숫자면 1개만 작성해도 됨*/
+}
+.track {
+    position: absolute;
+    left: 50vw; top: 0;
+    transform: translateX(-50%);
+    width: 1048px; /* svg 넓이  - 내 사이트에 맞게 값 수정 */
+}
