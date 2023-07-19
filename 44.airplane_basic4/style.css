@@ -2,18 +2,22 @@
 
 *{margin: 0; padding: 0;}
 html{font-size: 20px; line-height: 1.6;}
-body{color: #fff; background-color: #cd8fdd;}
+body{color: #fff; background-color: dodgerblue;}
 a{color: gold;}
 
-.wrap{}
+
+
+.wrap{position: relative;}
 .header{height: 400px; padding: 2rem;}
 
 .main-copy{font-size: 3rem;}
 
-.airstrip{position: absolute;
-top: 0; width: 7px; height: 500px;
-margin-top: 400px;
-background-color: #fff;
+.airstrip{
+    position: absolute;
+    top: 0;
+    width: 7px; height: 500px;
+    margin-top: 400px;
+    background-color: #fff;
 }
 .airstrip-a{left: 42%;}
 .airstrip-b{left: 58%;}
@@ -21,27 +25,29 @@ background-color: #fff;
 /* 트랙 */
 .airplane-scroll-timeline{
     position: relative;
-    border: 10px dashed yellow;
+    /* border: 10px dashed yellow; */
     height: calc(4305px + 2000px - 100vh);
     margin: 200px 0 300px;
     z-index: 5;
 }
-.airplane{position: absolute;
-top: 0; width: 100px; left: 0; 
-offset-distance: 100%;
-transform: rotate(180deg);
-offset-rotate: auto 90deg; /* 무조건 써놓기 - path 따라 머리방향 바꾸는 코드*/
-offset-path:path("m523.89,4304.71v-102.65c0-380.2-349.01-699.56-349.01-699.56-444.83-376.4,250.93-486.65,250.93-486.65,444.83-102.65,557.68-250.93,557.68-250.93,283.93-319.37-486.96-646.34-486.96-646.34-258.91-112.16-314.04-296.55-314.04-296.55C-5.24,1295.45,395.39,1206.1,502.03,1255.07c65,29.84,105.64,109.85,90,179.91-35.06,157.03-234.66,151.32-234.66,151.32-287.05,0-340.67-193.9-340.67-193.9-85.15-285.15,215.21-534.18,215.21-534.18,309.81-245.7,291.98-636.53,291.98-636.53V0");
-/* 따라다닐 경로 : svg - path - d 복붙 */
+.airplane{
+    position: absolute;
+    will-change: offset-distance;
+    top: 0; width: 100px; left: 0; 
+    offset-distance: 100%;
+    transform: rotate(180deg);
+    offset-rotate: auto 90deg;
+    offset-path:path("m523.89,4304.71v-102.65c0-380.2-349.01-699.56-349.01-699.56-444.83-376.4,250.93-486.65,250.93-486.65,444.83-102.65,557.68-250.93,557.68-250.93,283.93-319.37-486.96-646.34-486.96-646.34-258.91-112.16-314.04-296.55-314.04-296.55C-5.24,1295.45,395.39,1206.1,502.03,1255.07c65,29.84,105.64,109.85,90,179.91-35.06,157.03-234.66,151.32-234.66,151.32-287.05,0-340.67-193.9-340.67-193.9-85.15-285.15,215.21-534.18,215.21-534.18,309.81-245.7,291.98-636.53,291.98-636.53V0");
 }
-.airplane.up{transform: rotate(0deg);} /* 스크롤 업 할때 비행기 머리 방향위로 */
+.airplane.up{transform: rotate(0deg);}
 .airplane.down{transform: rotate(180deg);}
 .track{
     position: absolute;
     left: 50vw;
     transform: translateX(-50%);
     top: 0;
-    width: 1048px; /* index svg 넓이값 체크 */
+    width: 1048px;
+    will-change: transform;
 }
 .flight-path{fill:none; stroke: #fff; stroke-width: 7; stroke-dasharray: 14;}
 
@@ -50,9 +56,8 @@ offset-path:path("m523.89,4304.71v-102.65c0-380.2-349.01-699.56-349.01-699.56-44
     position: absolute;
     top: 2350px;
     height: 2000px;
-    border: 10px dashed mediumspringgreen;
+    /* border: 10px dashed mediumspringgreen; */
     left: 3%; width: 94%;
-    
 }
 .gallery-timeline .gallery{
     position: sticky;
@@ -60,9 +65,10 @@ offset-path:path("m523.89,4304.71v-102.65c0-380.2-349.01-699.56-349.01-699.56-44
     display: flex;width: 350vw;
     align-items: center;
     height: 100vh;
-    border: 10px dashed deeppink;
+    /* border: 10px dashed deeppink; */
     margin-top: -650px;
     z-index: 10;
+    will-change: opacity, transform; /* 브라우저에게 미리 애니메이션 발생할 것을 알려 최적화 */
 }
 .gallery-timeline .gallery-item{width: 70vw;}
 .gallery-photo{
@@ -74,6 +80,26 @@ offset-path:path("m523.89,4304.71v-102.65c0-380.2-349.01-699.56-349.01-699.56-44
     position: absolute;
     left: 0; top: 0;
     width: 100%;}
-.jeju{position: sticky; top: 0; width: 360px;
-margin: 0 auto; padding-top: 340px;
+.jeju{
+    position: sticky; 
+    top: 0; width: 360px;
+    margin: 0 auto;
+    padding-top: 340px;
+}
+.hello-jeju {
+    fill: #fff;
+    transform-origin: 300px 1300px; /* 어디서 시작할꺼냐 */
+    will-change: transform, opacity;
+}
+.page-content {
+    position: absolute;
+    left: 50vw; top: 0;
+    transform: translateX(-50%);
+    width: 90%; height: 100%;
+    line-height: 1.6;
+}
+.page-content .text-block {
+    position: absolute;
+    width: 50%;
+    will-change: transform, opacity;
 }
